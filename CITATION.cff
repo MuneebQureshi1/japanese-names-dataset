@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+title: Japanese Names Dataset
+message: "If you use this dataset, please cite it and link to JapaneseNamer.info."
+authors:
+  - family-names: Qureshi
+    given-names: Muneeb
+repository-code: "https://github.com/MuneebQureshi1/japanese-names-dataset"
+url: "https://www.japanesenamer.info/"
+license: MIT
+version: 1.0.0
+date-released: 2026-10-05
+keywords:
+  - japanese names
+  - kanji
+  - dataset
+  - json

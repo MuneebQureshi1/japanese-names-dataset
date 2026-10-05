@@ -1,0 +1,38 @@
+{
+  "name": "japanese-names-dataset",
+  "version": "1.0.0",
+  "description": "Open JSON dataset of Japanese names (kanji, readings, meanings) — companion to JapaneseNamer.info",
+  "homepage": "https://www.japanesenamer.info/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MuneebQureshi1/japanese-names-dataset.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MuneebQureshi1/japanese-names-dataset/issues"
+  },
+  "license": "MIT",
+  "keywords": [
+    "japanese-names",
+    "japanese",
+    "names",
+    "kanji",
+    "romaji",
+    "hiragana",
+    "dataset",
+    "json",
+    "name-generator",
+    "anime-names",
+    "japanesenamer"
+  ],
+  "files": [
+    "data/names.json",
+    "docs",
+    "examples",
+    "LICENSE",
+    "README.md"
+  ],
+  "scripts": {
+    "validate": "node scripts/validate-data.js",
+    "example": "node examples/javascript.js"
+  }
+}

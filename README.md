@@ -1,61 +1,90 @@
 # 🇯🇵 Japanese Names Dataset
 
-### A developer-friendly collection of Japanese names, kanji, readings & meanings.
+**Open JSON data for Japanese first names, surnames, kanji, readings, and meanings — built for developers, games, and creative tools.**
 
-[![Japanese Names](https://img.shields.io/badge/Japanese-Names-red?style=for-the-badge)](https://www.japanesenamer.info/first-names)
-[![JSON](https://img.shields.io/badge/Data-JSON-orange?style=for-the-badge)](https://github.com/)
-[![Open Source](https://img.shields.io/badge/Open-Source-green?style=for-the-badge)](LICENSE)
+Companion open-source project for **[JapaneseNamer.info](https://www.japanesenamer.info/)** — browse [50,000+ names online](https://www.japanesenamer.info/first-names), use free [generators](https://www.japanesenamer.info/generator), or download this repo for offline use.
 
-> 🌸 **Discover Japanese names with meaning — and use the data in your own projects.**
+[![JapaneseNamer.info](https://img.shields.io/badge/Website-JapaneseNamer.info-red?style=for-the-badge&logo=google-chrome&logoColor=white)](https://www.japanesenamer.info/)
+[![First names](https://img.shields.io/badge/Browse-First%20Names-orange?style=for-the-badge)](https://www.japanesenamer.info/first-names)
+[![Generator](https://img.shields.io/badge/Try-Name%20Generator-blue?style=for-the-badge)](https://www.japanesenamer.info/generator)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
+[![Validate](https://img.shields.io/badge/CI-Validate%20JSON-lightgrey?style=for-the-badge)](.github/workflows/validate.yml)
+
+> 🌸 **Need meanings and kanji notes?** → [JapaneseNamer.info](https://www.japanesenamer.info/) · **Need JSON in your app?** → use `data/names.json` in this repo.
 
 ---
 
 ## ✨ About
 
-**Japanese Names Dataset** is a structured collection of Japanese names designed to make Japanese naming data easier to explore and use in software projects.
+**Japanese Names Dataset** is a structured collection of Japanese names designed to make naming data easy to search, filter, and integrate into software.
 
-Each entry can contain:
+Each entry includes:
 
-* 🏷️ **Name**
-* 🈳 **Kanji**
-* 🔤 **Romaji / Reading**
-* 👤 **Gender**
-* 💭 **Meaning**
+| Field | Description |
+| ----- | ----------- |
+| 🏷️ **name** | Romanized name |
+| 🈳 **kanji** | Kanji form for this entry |
+| 🔤 **reading** | Hiragana reading |
+| 🔤 **reading_romaji** | Romaji (for URLs and search) |
+| 👤 **gender** | `male`, `female`, `unisex`, or `last` (surname) |
+| 💭 **meaning** | Short English gloss |
+| 🏷️ **tags** | Themes: nature, flower, ocean, moon, … |
+| 🔗 **profile_url** | Full profile on [JapaneseNamer.info](https://www.japanesenamer.info/first-names) |
 
-The dataset is provided in a simple JSON format, making it easy to integrate into web apps, games, generators, APIs, and other projects.
+The live site adds audio, alternate kanji, Seimei Handan, and generators — this repository focuses on **developer-friendly JSON**.
 
----
-
-## 🌸 Name Preview
-
-| Name       | Kanji | Reading |   Gender  | Meaning                |
-| :--------- | :---: | :-----: | :-------: | :--------------------- |
-| **Haruto** |   陽翔  |   はると   |  ♂️ Male  | Soaring toward the sun |
-| **Ren**    |   蓮   |    れん   |  ♂️ Male  | Lotus                  |
-| **Kaito**  |   海翔  |   かいと   |  ♂️ Male  | Sea + soaring          |
-| **Minato** |   湊   |   みなと   |  ♂️ Male  | Harbor                 |
-| **Riku**   |   陸   |    りく   |  ♂️ Male  | Land                   |
-| **Sakura** |   桜   |   さくら   | ♀️ Female | Cherry blossom         |
-| **Aiko**   |   愛子  |   あいこ   | ♀️ Female | Child of love          |
-| **Himari** |   陽葵  |   ひまり   | ♀️ Female | Sun + sunflower        |
-| **Yuzuki** |   結月  |   ゆづき   | ♀️ Female | Binding moon           |
-| **Rin**    |   凛   |    りん   | ♀️ Female | Dignified              |
+📖 [Data schema](docs/DATA-SCHEMA.md) · 📚 [Full resource list (tools, blog, tags)](docs/RESOURCES.md)
 
 ---
 
-## 🚀 Quick Start
+## 🌐 JapaneseNamer.info — tools & guides
 
-The dataset is just JSON, so you can use it with almost anything.
+Use the website when you want to explore beyond the JSON subset:
 
-### JavaScript
+| Tool | Description |
+| ---- | ----------- |
+| [Name generator](https://www.japanesenamer.info/generator) | Random authentic names by gender and style |
+| [First names directory](https://www.japanesenamer.info/first-names) | Search 50,000+ entries with meanings |
+| [Boy / girl lists](https://www.japanesenamer.info/japanese-boy-names) | Curated lists: [boys](https://www.japanesenamer.info/japanese-boy-names), [girls](https://www.japanesenamer.info/japanese-girl-names) |
+| [Last names](https://www.japanesenamer.info/last-names) | Japanese surnames and meanings |
+| [My name in Japanese](https://www.japanesenamer.info/my-name-in-japanese) | Convert any name to katakana / hiragana / kanji |
+| [Username generator](https://www.japanesenamer.info/japanese-username-generator) | Gaming & social handles |
+| [Nickname generator](https://www.japanesenamer.info/japanese-nickname-generator) | Short Japanese nicknames |
+| [Anime-style names](https://www.japanesenamer.info/anime-japanese-names) | Character naming inspiration |
+| [Seimei Handan](https://www.japanesenamer.info/seimei-handan) | Five-kaku name fortune calculator |
+| [Blog & guides](https://www.japanesenamer.info/blog) | [How names work](https://www.japanesenamer.info/blog/how-japanese-names-work), [nature names](https://www.japanesenamer.info/blog/japanese-nature-names), [warrior meanings](https://www.japanesenamer.info/blog/japanese-names-meaning-warrior-strength) |
+
+More links (tag filters, popular profiles, FAQ): **[docs/RESOURCES.md](docs/RESOURCES.md)**
+
+---
+
+## 🌸 Name preview
+
+| Name | Kanji | Reading | Gender | Meaning | Profile |
+| :--- | :---: | :---: | :---: | :--- | :--- |
+| **Haruto** | 陽翔 | はると | ♂ Male | Soaring toward the sun | [View →](https://www.japanesenamer.info/names/haruto) |
+| **Ren** | 蓮 | れん | ♂ Male | Lotus | [View →](https://www.japanesenamer.info/names/ren) |
+| **Kaito** | 海翔 | かいと | ♂ Male | Sea and soaring | [View →](https://www.japanesenamer.info/names/kaito) |
+| **Sakura** | 桜 | さくら | ♀ Female | Cherry blossom | [View →](https://www.japanesenamer.info/names/sakura) |
+| **Himari** | 陽葵 | ひまり | ♀ Female | Sun and sunflower | [View →](https://www.japanesenamer.info/names/himari) |
+| **Aoi** | 葵 | あおい | ♀ Female | Hollyhock | [View →](https://www.japanesenamer.info/names/aoi) |
+| **Yuzuki** | 結月 | ゆづき | ♀ Female | Binding moon | [View →](https://www.japanesenamer.info/names/yuzuki) |
+| **Tanaka** | 田中 | たなか | Surname | Middle of field | [Last names →](https://www.japanesenamer.info/last-names) |
+
+---
+
+## 🚀 Quick start
+
+Clone or download this repository, then load `data/names.json`.
+
+### JavaScript (Node)
 
 ```js
 const names = require("./data/names.json");
 
-const randomName =
-  names[Math.floor(Math.random() * names.length)];
-
-console.log(randomName);
+const randomName = names[Math.floor(Math.random() * names.length)];
+console.log(randomName.name, randomName.kanji, randomName.meaning);
+console.log("Full profile:", randomName.profile_url);
 ```
 
 ### TypeScript
@@ -63,10 +92,8 @@ console.log(randomName);
 ```ts
 import names from "./data/names.json";
 
-const randomName =
-  names[Math.floor(Math.random() * names.length)];
-
-console.log(randomName);
+type NameEntry = (typeof names)[number];
+const sakura = names.find((n) => n.reading_romaji === "sakura");
 ```
 
 ### Python
@@ -81,172 +108,157 @@ with open("data/names.json", "r", encoding="utf-8") as file:
 print(random.choice(names))
 ```
 
----
+### Validate locally
 
-## 🎯 What Can You Build?
+```bash
+npm run validate
+# or: node scripts/validate-data.js
+```
 
-This dataset can be used to create:
-
-🎮 **Game Characters**
-Generate names for NPCs, RPG characters, and fictional worlds.
-
-✍️ **Writing Tools**
-Find names for characters based on their style or meaning.
-
-👾 **Username Generators**
-Create Japanese-inspired usernames for games and communities.
-
-🌸 **Name Generators**
-Build your own Japanese name generator.
-
-📱 **Mobile Apps**
-Use the JSON data in React Native, Flutter, or native applications.
-
-🌐 **Web Applications**
-Integrate the dataset into JavaScript, React, Next.js, or other frameworks.
-
-🤖 **AI Projects**
-Use structured name data as part of creative or experimental applications.
+Examples: [`examples/javascript.js`](examples/javascript.js) · [`examples/python.py`](examples/python.py)
 
 ---
 
-## 📂 Project Structure
+## 🎯 What can you build?
+
+- 🎮 **Games & RPGs** — NPC and character names with consistent structure  
+- ✍️ **Writing & worldbuilding** — filter by [meaning tags](https://www.japanesenamer.info/first-names#tag=nature)  
+- 👾 **Username / nickname tools** — pair with [JapaneseNamer generators](https://www.japanesenamer.info/japanese-username-generator)  
+- 📱 **Mobile apps** — React Native, Flutter, Swift, Kotlin  
+- 🌐 **Web apps** — React, Next.js, Vue, Svelte  
+- 🤖 **AI & creative tools** — structured training or prompt context  
+
+---
+
+## 📂 Project structure
 
 ```text
 japanese-names-dataset/
-│
 ├── data/
-│   └── names.json
-│
+│   └── names.json          # Main dataset (169+ entries, growing)
+├── docs/
+│   ├── DATA-SCHEMA.md
+│   └── RESOURCES.md        # Links to JapaneseNamer.info tools & blog
 ├── examples/
 │   ├── javascript.js
 │   └── python.py
-│
 ├── scripts/
 │   └── validate-data.js
-│
-├── .github/
-│   └── workflows/
-│       └── validate.yml
-│
+├── .github/workflows/
+│   └── validate.yml
 ├── CONTRIBUTING.md
 ├── LICENSE
+├── package.json
 └── README.md
 ```
 
 ---
 
-## 🔎 Simple Filtering
-
-Because every name is structured data, you can easily filter the collection.
+## 🔎 Filtering examples
 
 ### Female names
 
 ```js
-const femaleNames = names.filter(
-  name => name.gender === "female"
-);
+const femaleNames = names.filter((n) => n.gender === "female");
 ```
 
-### Male names
+### Surnames
 
 ```js
-const maleNames = names.filter(
-  name => name.gender === "male"
-);
+const lastNames = names.filter((n) => n.gender === "last");
 ```
 
-### Search by meaning
+### By tag (matches site categories)
 
 ```js
-const flowerNames = names.filter(
-  name =>
-    name.meaning
-      .toLowerCase()
-      .includes("flower")
-);
+const moonNames = names.filter((n) => (n.tags || []).includes("moon"));
 ```
+
+### Open full profile on the web
+
+```js
+const entry = names.find((n) => n.reading_romaji === "haruto");
+if (entry?.profile_url) {
+  // e.g. https://www.japanesenamer.info/names/haruto
+}
+```
+
+Browse the same themes on the site: [flower](https://www.japanesenamer.info/first-names#tag=flower) · [ocean](https://www.japanesenamer.info/first-names#tag=ocean) · [strength](https://www.japanesenamer.info/first-names#tag=strength)
 
 ---
 
-## 🧩 Data Format
-
-Each name follows a simple structure:
+## 🧩 Data format
 
 ```json
 {
   "name": "Sakura",
   "kanji": "桜",
   "reading": "さくら",
+  "reading_romaji": "sakura",
   "gender": "female",
-  "meaning": "Cherry blossom"
+  "meaning": "Cherry blossom",
+  "tags": ["nature", "flower"],
+  "source": "JapaneseNamer.info",
+  "profile_url": "https://www.japanesenamer.info/names/sakura"
 }
 ```
 
-Keeping the data structured makes it easier to search, filter, sort, and integrate into other applications.
+See [docs/DATA-SCHEMA.md](docs/DATA-SCHEMA.md) for all fields.
 
 ---
 
-## 🌐 Explore Online
+## 📎 Citation & attribution
 
-Want to browse Japanese names instead of working with JSON?
+If you use this dataset in a project, blog post, or paper, please link to **both** the repo and the website:
 
-### 👉 [Explore Japanese First Names](https://www.japanesenamer.info/first-names)
+```text
+Japanese Names Dataset (2026). GitHub: https://github.com/MuneebQureshi1/japanese-names-dataset
+Data & extended catalog: https://www.japanesenamer.info/
+```
 
-Browse Japanese names with kanji, readings, meanings, and categories.
+**Suggested HTML:**
 
-### 🎲 [Try the Japanese Name Generator](https://www.japanesenamer.info/)
+```html
+<a href="https://www.japanesenamer.info/">Japanese name meanings & generators</a>
+ —
+<a href="https://github.com/MuneebQureshi1/japanese-names-dataset">open JSON dataset</a>
+```
 
-Generate Japanese name ideas instantly.
+That helps others find the full [name directory](https://www.japanesenamer.info/first-names) and keeps open data and the live site in sync.
 
 ---
 
 ## 🤝 Contributing
 
-Found an incorrect entry or have useful additions?
+Corrections and new entries are welcome. Read [CONTRIBUTING.md](CONTRIBUTING.md), run `npm run validate`, and open a PR.
 
-Contributions are welcome.
-
-Before submitting a pull request:
-
-* ✅ Keep the JSON valid
-* ✅ Avoid duplicate entries
-* ✅ Follow the existing data structure
-* ✅ Provide accurate information
-* ✅ Document sources where appropriate
-
-See [CONTRIBUTING.md](CONTRIBUTING.md) for details.
+For deep kanji variants and pronunciation audio, cross-check on [JapaneseNamer.info](https://www.japanesenamer.info/).
 
 ---
 
-## ⚠️ Important Note
+## ⚠️ Important note
 
-Japanese names can have multiple kanji representations and readings.
-
-The meaning of a name can also depend on the specific kanji used and the naming context.
-
-This project is intended as a practical dataset for developers and creative projects, not as an authoritative linguistic dictionary.
+Japanese names often have **multiple kanji and readings**. Meanings depend on which characters are used. This project is a **practical developer dataset**, not a legal or linguistic authority. For naming real people, consult native resources and the expanded profiles on [JapaneseNamer.info](https://www.japanesenamer.info/).
 
 ---
 
-## ⭐ Like the Project?
+## ⭐ Support the project
 
-If you find this dataset useful:
+If this repo helps you:
 
-**⭐ Star the repository**
+1. ⭐ **Star** [github.com/MuneebQureshi1/japanese-names-dataset](https://github.com/MuneebQureshi1/japanese-names-dataset)  
+2. 🔗 **Link** to [JapaneseNamer.info](https://www.japanesenamer.info/) from your README or docs  
+3. 🍴 **Fork** and ship something cool  
+4. 📢 **Share** with developers who need Japanese names  
 
-**🍴 Fork it**
-
-**🤝 Contribute**
-
-**📢 Share it with other developers**
+**Suggested GitHub topics:** `japanese-names`, `kanji`, `dataset`, `json`, `name-generator`, `anime`, `japan`, `nlp`, `game-dev`
 
 ---
 
 <div align="center">
 
-### 🌸 Made for developers who need Japanese names.
+### 🌸 Made for developers · Curated on [JapaneseNamer.info](https://www.japanesenamer.info/)
 
-**Explore more → https://www.japanesenamer.info/**
+**[Browse names](https://www.japanesenamer.info/first-names)** · **[Generate a name](https://www.japanesenamer.info/generator)** · **[Read the guides](https://www.japanesenamer.info/blog)**
 
 </div>
